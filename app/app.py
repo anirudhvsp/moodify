@@ -6,7 +6,7 @@ from PIL import Image
 import cv2
 from io import BytesIO
 import numpy as np
-
+data1=""
 app = Flask(__name__)
 def readb64(base64_string):
     sbuf = BytesIO()
