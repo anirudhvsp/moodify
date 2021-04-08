@@ -55,4 +55,4 @@ def player():
     else:
         playlist="https://open.spotify.com/embed/playlist/477J7LQ97g60MvkjUGWbQN"
     return render_template("player.html",playlist=playlist)
-app.run()
+# app.run()
