@@ -8,7 +8,6 @@ from io import BytesIO
 import numpy as np
 
 app = Flask(__name__)
-data1=[]
 def readb64(base64_string):
     sbuf = BytesIO()
     sbuf.write(base64.b64decode(base64_string))
@@ -33,7 +32,6 @@ def get_data():
 
 @app.route('/player')
 def player():
-    print(data1)
     img=readb64(data1)
     detector=FER()
     x=detector.detect_emotions(img)
@@ -57,4 +55,4 @@ def player():
     else:
         playlist="https://open.spotify.com/embed/playlist/477J7LQ97g60MvkjUGWbQN"
     return render_template("player.html",playlist=playlist)
-# app.run()
+app.run()
