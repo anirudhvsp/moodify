@@ -1,0 +1,14 @@
+# you can list packages
+libexample-dev
+libsm6
+libxrender1
+libfontconfig1
+libice6
+libgl
+libgl1
+
+# or include links to specific .deb files
+https://downloads.example.com/example.deb
+
+# or add custom apt repos (only required if using packages outside of the standard Ubuntu APT repositories)
+:repo:deb https://apt.example.com/ example-distro main
