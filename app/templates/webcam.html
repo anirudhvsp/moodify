@@ -42,9 +42,10 @@
             </div>
             <div id="results"></div>
 
-            
-            <button onclick="generate()" id="gen">Generate Playlist</button>
-           
+            <form action="/player" method="POST">
+                <input type="text" name="javascript_data" id="data">
+                <input type="submit" onclick="generate()" id="gen" value="Generate Playlist">
+            </form>
         </div>
     
     
@@ -80,8 +81,9 @@
                 alert("Please capture a photo before generating the playlist")
             }
             else{
-                $.post( "/player", {javascript_data: d_uri });
-                location.replace("/player")
+                // $.post( "/player", {javascript_data: d_uri });
+                // location.replace("/player")
+                document.getElementById("data").value=d_uri;
             }
         }
 
